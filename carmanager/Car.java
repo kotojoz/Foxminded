@@ -10,9 +10,9 @@ public class Car {
 
     public int weight;
 
-    public String color;
+    public Color color;
 
-    public Car(String name, int yearOfProduction, int price, int weight, String color) {
+    public Car(String name, int yearOfProduction, int price, int weight, Color color) {
         this.name = name;
         this.yearOfProduction = yearOfProduction;
         this.price = price;

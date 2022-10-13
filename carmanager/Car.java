@@ -19,4 +19,15 @@ public class Car {
         this.weight = weight;
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name='" + name + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                ", price=" + price +
+                ", weight=" + weight +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

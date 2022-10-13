@@ -25,4 +25,17 @@ public class Motorcycle {
         this.engineType = engineType;
         this.isReadyToDrive = isReadyToDrive;
     }
+
+    @Override
+    public String toString() {
+        return "Motorcycle{" +
+                "name='" + name + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                ", price=" + price +
+                ", weight=" + weight +
+                ", color='" + color + '\'' +
+                ", engineType='" + engineType + '\'' +
+                ", isReadyToDrive=" + isReadyToDrive +
+                '}';
+    }
 }

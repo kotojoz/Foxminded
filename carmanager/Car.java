@@ -14,12 +14,32 @@ public class Car {
 
     public Color color;
 
+    private int distance = 0;
+
     public Car(String name, int yearOfProduction, int price, int weight, Color color) {
         this.name = name;
         this.yearOfProduction = yearOfProduction;
         this.price = price;
         this.weight = weight;
         this.color = color;
+    }
+
+    /*
+    Описание как все это работает, чмтать в комментариях Motorcycle addDistance
+     */
+    public void addDistance(int additionalDistance) {
+        try {
+            if (additionalDistance <= 0) {
+                throw new RuntimeException("Additional distance must be greater then 0");
+            }
+            distance += additionalDistance;
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public int getDistance() {
+        return distance;
     }
 
     @Override
@@ -53,7 +73,8 @@ public class Car {
                 ", yearOfProduction=" + yearOfProduction +
                 ", price=" + price +
                 ", weight=" + weight +
-                ", color='" + color + '\'' +
+                ", color=" + color +
+                ", distance=" + distance +
                 '}';
     }
 }

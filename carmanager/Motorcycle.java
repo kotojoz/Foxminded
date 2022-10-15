@@ -56,26 +56,15 @@ public class Motorcycle {
     }
 
     public void addDistance(int additionalDistance) {
+        distance += additionalDistance;
+    }
+
+    public void addDistance(float additionalDistance) {
         /*
-        Блок try нужен, если часть кода может выбрасить ошибку.
-        Мы как бы заранее говорим, будь там осторожен
+        Метод Math.round вернет целое число, поэтому мы может вызвать метод addDistance, который принимает int
+        и как параметр поставить туда результат округления. Это позволит нам избежать дублирования кода(Дублирование кода это плохо)
          */
-        try {
-            if (additionalDistance <= 0) {  //Проверяем значение additionalDistance и если оно меньше или равно 0, создаем ошибку
-                /*
-                Создаем ошибку с сообщением.
-                !!! Надо понимать, что после этого прерывается нормальный порядок действия программы.
-                После создания ошибки, программа начнет искать блок catch, который сможет обработать этот вид ошибки
-                Если такого нет, то программа закроется с выбросом ошибки.
-                 */
-                throw new RuntimeException("Additional distance must be greater then 0");
-            }
-
-            distance += additionalDistance; // в случаи ошибки, эта часть кода не будет выполняться
-
-        } catch (RuntimeException e) { //Блок catch ловит ошибки.
-            System.out.println(e.getMessage()); // метод getMessage вернет строку, что мы написали при создание ошибки
-        }
+        addDistance(Math.round(additionalDistance));
     }
 
     @Override

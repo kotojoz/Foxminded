@@ -25,7 +25,7 @@ public class Car {
     }
 
     /*
-    Описание как все это работает, чмтать в комментариях Motorcycle addDistance
+    Описание как все это работает, читать в комментариях Motorcycle addDistance
      */
     public void addDistance(int additionalDistance) {
         try {
@@ -36,6 +36,10 @@ public class Car {
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public void addDistance(double additionalDistance) {
+        addDistance(Math.round((float) additionalDistance));
     }
 
     public int getDistance() {

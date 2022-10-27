@@ -8,14 +8,18 @@ public class CarManager {
 
         Motorcycle yamaha = Motorcycles.YAMAHA.getMotorcycle();
 
+        Motorcycle yamaha1 = Motorcycles.YAMAHA.getMotorcycle();
+
         suzuki.addDistance(250_000);
         yamaha.addDistance(250_000);
-        suzuki.addDistance(11.5F);
-        yamaha.addDistance(-11.5F);
+
+        yamaha1.addDistance(300_000);
         suzuki.destroyEngine();
         yamaha.destroyEngine();
+
         System.out.println(suzuki);
         System.out.println(yamaha);
+        System.out.println(yamaha1);
 
 
     }

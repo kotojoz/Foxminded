@@ -39,6 +39,17 @@ public class Motorcycle {
         this.isReadyToDrive = isReadyToDrive;
     }
 
+    //Конструктор, для того чтобы делать копию мотоцикла. Нужно чтобы из енум Motorcycles через геттер получать новую копию.
+    public Motorcycle(Motorcycle motorcycle) {
+        this.name = motorcycle.name;
+        this.yearOfProduction = motorcycle.yearOfProduction;
+        this.price = motorcycle.price;
+        this.weight = motorcycle.weight;
+        this.color = motorcycle.color;
+        this.engineType = motorcycle.engineType;
+        this.isReadyToDrive = motorcycle.isReadyToDrive;
+    }
+
     public void repair() {
         isReadyToDrive = true;
     }

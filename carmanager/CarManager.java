@@ -4,9 +4,9 @@ public class CarManager {
 
     public static void main(String[] args) {
 
-        Motorcycle suzuki = new Motorcycle("Suzuki GSX-R1000", 2021, 16_000, 600, " black", "diesel", true);
+        Motorcycle suzuki = Motorcycles.SUZUKI.getMotorcycle();
 
-        Motorcycle yamaha = new Motorcycle("Yamaha  FZ1", 2007, 9_000, 700, "orangE", "gas", false);
+        Motorcycle yamaha = Motorcycles.YAMAHA.getMotorcycle();
 
         suzuki.addDistance(250_000);
         yamaha.addDistance(250_000);
